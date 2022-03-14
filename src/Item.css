@@ -2,25 +2,33 @@
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid #ccc;
-  padding: 10px;
+  padding: 16px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .Item-image {
-  width: 64px;
-  height: 64px;
+  width: 72px;
+  height: 72px;
   border: 1px solid #ccc;
   margin-right: 10px;
   float: left;
 }
 
 .Item-title {
-  font-weight: bold;
+  font-weight: 700;
   margin-bottom: 0.4em;
+  color: black;
 }
 
 .Item-price {
   text-align: right;
   font-size: 18px;
+  color: #555;
+}
+
+.Item-description {
+  text-align: left;
+  font-size: 16px;
   color: #555;
 }
 

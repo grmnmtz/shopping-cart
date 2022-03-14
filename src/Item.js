@@ -5,8 +5,9 @@ import './Item.css'
 const Item = ({ item, children }) => {
   return (
     <div className="Item">
+      <div className="Item-image" />
+
       <div className="Item-Left">
-        <div className="Item-image" />
         <div className="Item-title">{item.name}</div>
         <div className="Item-description">{item.description}</div>
       </div>

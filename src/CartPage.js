@@ -7,10 +7,11 @@ function CartPage({ items, onAddOne, onRemoveOne, total }) {
   if (!items.length) {
     return (
       <h2 className="empty-cart-message">
-        Your cart is empty. Add some products to it.
+        Your cart is empty. Add some expensive products to it.
       </h2>
     )
   }
+
   return (
     <div>
       <ul className="CartPage-items">

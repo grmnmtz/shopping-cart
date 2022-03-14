@@ -20,14 +20,8 @@ let items = [
   {
     id: 3,
     name: 'Apple Watch Sport',
-    description: 'A watch',
+    description: 'A very expensive watch',
     price: 249.99,
-  },
-  {
-    id: 4,
-    name: 'Apple Watch Silver',
-    description: 'A more expensive watch',
-    price: 599.99,
   },
 ]
 export { items }
