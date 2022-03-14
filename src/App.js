@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import ItemPage from './ItemPage'
 import CartPage from './CartPage'
 import { items } from './static-data'
@@ -34,6 +34,17 @@ const summarizeCart = (cart) => {
 const App = () => {
   const [activeTab, setActiveTab] = useState('items')
   const [cart, setCart] = useState([])
+  // const [total, setTotal] = useState(0)
+
+  const calculateTotal = (cart) => {
+    if (cart.length < 1) return
+
+    let totalPrice = cart
+      .map((item) => item.price)
+      .reduce((acum, val) => acum + val, 0)
+
+    return Math.round(totalPrice)
+  }
 
   //Updater functional form of SetCart, where we pass it a function and it calls that function with the previous cart value.
   //It implicitly returns the new array, which replaces the old
@@ -62,13 +73,14 @@ const App = () => {
           onAddToCart={addToCart}
           onRemoveItem={remoteItem}
           cart={summarizeCart(cart)}
+          total={calculateTotal(cart)}
         />
       </main>
     </div>
   )
 }
 
-const Content = ({ tab, onAddToCart, onRemoveItem, cart }) => {
+const Content = ({ tab, onAddToCart, onRemoveItem, cart, total }) => {
   switch (tab) {
     default:
     case 'items':
@@ -79,6 +91,7 @@ const Content = ({ tab, onAddToCart, onRemoveItem, cart }) => {
           items={cart}
           onAddOne={onAddToCart}
           onRemoveOne={onRemoveItem}
+          total={total}
         />
       )
   }
