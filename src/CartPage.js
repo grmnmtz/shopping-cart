@@ -38,7 +38,7 @@ function CartPage({ items, onAddOne, onRemoveOne, total }) {
         ))}
       </ul>
       <div className="total-message">
-        {`The total of your cart is: ${total}`}
+        {`The total of your cart is: $${total}`}
       </div>
     </div>
   )
