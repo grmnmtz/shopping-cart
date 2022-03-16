@@ -23,5 +23,11 @@ let items = [
     description: 'A very expensive watch',
     price: 249.99,
   },
+  {
+    id: 5,
+    name: 'MacBook Air M1',
+    description: 'A very expensivecomputer',
+    price: 1249.99,
+  },
 ]
 export { items }
